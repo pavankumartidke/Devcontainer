@@ -1,0 +1,16 @@
+services:
+  devcontainer:
+    container_name: ReactSeed
+    # build: 
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm
+    volumes:
+      - ..:/workspace:cached
+      - ~/.gitconfig:/workspace/.devcontainer/.gitconfig
+    # network_mode: service:postgres
+    command: sleep infinity
+    working_dir: /workspace
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    privileged: true

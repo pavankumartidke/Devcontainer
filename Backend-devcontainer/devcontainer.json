@@ -1,0 +1,55 @@
+{
+  "name": "Nestjs Seed Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "donjayamanne.git-extension-pack",
+        "eamodio.gitlens",
+        "ms-vscode.vscode-typescript-next",
+        "xabikos.javascriptsnippets",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "msjsdiag.debugger-for-chrome"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "files.useExperimentalFileWatcher": true,
+        "files.watcherExclude": {
+          "**/node_modules/**": true,
+          "**/.git/objects/**": true,
+          "**/.git/subtree-cache/**": true,
+          "**/tmp/**": true
+        }
+      }
+    }
+  },
+  "forwardPorts": [
+    8000,
+    5433,
+    5050
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "Seed Backend",
+      "onAutoForward": "notify"
+    },
+    "5433": {
+      "label": "PostgreSQL DB",
+      "onAutoForward": "notify"
+    },
+    "5050": {
+      "label": "Pg Admin 4",
+      "onAutoForward": "notify"
+    }
+  },
+  // user can be modified
+  // hello from container
+  "remoteUser": "node",
+  "initializeCommand": "sudo rm -rf ~/.gitconfig || true && sudo cp /mnt/c/Users/Pavankumar/.gitconfig ~/",
+  "postCreateCommand": "sudo sysctl fs.inotify.max_user_watches=524288 && git config --global --add safe.directory /workspace && git config --global core.autocrlf input && sudo chmod +x /workspace/.devcontainer/setup.sh && sudo sh /workspace/.devcontainer/setup.sh && npm start"
+}
