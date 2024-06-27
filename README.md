@@ -116,7 +116,7 @@
 
 <hr>
 
-## Let's deep dive in DevContainer setup
+## Let's deep dive in devcontainer setup
 
 ### Run exiisting project with devcontainer
 
@@ -166,6 +166,30 @@
 
   * Here, you can add or remove extensions and settings according to project environment
 
+## Different Profiles for different devcontainer
+
+- If you want to keep your vscode profile seperate from the devcontainer or you want to use diffetrent profile in the devcontainers here's how you can setup it (No TLDR)
+
+* **Open Settings** :
+
+  - Click the `Manage` (gear) icon at the bottom left.
+
+* **Access Profiles** :
+
+  - Hover over `Profile (Default)` and click.
+
+* **Create a New Profile** :
+
+  - Select `Create Profile...`
+  - Choose from `what to configure` and name your new profile.
+  - Hit `Enter` or click `Create`.
+
+* **Reload** :
+
+  - Reload the window when prompted.
+
+* **Now you're all set to work in a new profile!**
+
 ## Advantages and Disadvantages
 
 ### Advantages
@@ -174,6 +198,9 @@
 
   - New developers can get up and running quickly by simply cloning the repository and starting the container.
   - No need of complex setup instructions
+
+* **Ease of use** :
+  - Set up and running in 15–30 mins and increase productive.
 
 - **Consistency Across Environments** :
 
@@ -184,6 +211,9 @@
   - Isolates dependencies and tools.
   - prevent conflicts with other projects.
 
+* **Git works in there** :
+  - all your credentials and ssh keys all get passed through and work automagically!
+
 ### Disadvantages
 
 - **Performance Overhead** :
@@ -193,3 +223,19 @@
 
 - **Complexity** :
   - Requires basic knowledge of Docker and containerization concepts.
+
+* **They take time to set up** :
+
+  - They do have some initial upfront time/effort cost.
+
+* **They can become stale** :
+
+  - Because of the fact the dev container is not part of the main codebase, it is very easy to forget to keep the dependencies updated.
+
+* **No support for Windows images (yet)** :
+
+  - You have to do hands dirty with `Linux` and `Bash` things to get familiar.
+
+* **VSCode LiveShare has issues** :
+  - Because of the way VSCode is running within the container, there are a few workarounds for the issues.
+  - Some functionality such as the voice chat, may or may not function 100%.
