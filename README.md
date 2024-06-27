@@ -220,7 +220,12 @@ are maintained.
   - prevent conflicts with other projects.
 
 * **Git works in there** :
+
   - all your credentials and ssh keys all get passed through and work automagically!
+
+* **Portability** :
+  - They can be easily moved from one computer to another.
+  - To share your development environment with others.
 
 ### Disadvantages
 
@@ -235,11 +240,6 @@ are maintained.
 * **They take time to set up** :
 
   - They do have some initial upfront time/effort cost.
-
-* **Pin your dependency versions** :
-
-  - The installation commands uses `apt-get` commands to install dependencies and docker will cache your built containers.
-  - if you rebuild your container, you could end up in a situation where you accidently install a newer version of your dependency.
 
 * **They can become stale** :
 
