@@ -47,9 +47,9 @@
    $ wsl --shutdown
    ```
 
-### **WSL** Now, close the current window and open new WSL terminal.
+### Now close the current window and open new WSL terminal.
 
-- By pressing 🪟 and typing `Terminal` and open `Terminal App` .
+- By pressing 🪟 and typing `Terminal` you can open `Terminal App` .
 - Click on dropdown from the top bar and select `Ubuntu` terminal.
 - Now, run the following commands...
 
@@ -110,22 +110,35 @@
    $ wsl --shutdown
    ```
 
+<h3 align="center">OR</h3>
+
+- If you find docker installation lengthy, simply just run the `docker-setup.sh` file in WSL it will do it for you.
+
+<hr>
+
 ## Let's deep dive in DevContainer setup
 
 ### Run exiisting project with devcontainer
 
-1. Clone project in desired location and open folder in vscode
+1. **Clone Your Project**
    ```
    [/mnt/{drive}/path/to/project]$ code .
    ```
-   e.g. `/mnt/c/My_Projects/project-1`
-2. After opening vscode, go ahead and press `f1` or `ctrl + shift + P` to open vscode's command palette.
+   - Example: `/mnt/c/My_Projects/project-1`
+2. **Open VSCode**
 
-3. Now, type `Dev Container: Rebuild amd Reopen in container` in that command palette and hit `enter`
+   - Press `F1` or `Ctrl + Shift + P` to open the command palette..
 
-4. Now, devcontainer building process is begin, it may ask for WSL password, so keep an eye on the logs. (To see logs, below notification area click on `(show logs)`)
+3. **Rebuild and Reopen in Container**
 
-5. Wait for some time until you see the starting the terminal of `backend` or `frontend` depending on what you have started.
+   - Type `Dev Container: Rebuild and Reopen in Container` and hit `Enter`.
+
+4. **Building devcontainer**
+
+   - Keep an eye on the logs for any WSL `password` prompts. Click on `(show logs)` in the notification area to view.
+
+5. **Get Started!**
+   - Wait a bit for the terminal to start up your `backend` or `frontend`. You're ready to code!
 
 ## Customizations in devcontainer
 
@@ -152,3 +165,31 @@
     ```
 
   * Here, you can add or remove extensions and settings according to project environment
+
+## Advantages and Disadvantages
+
+### Advantages
+
+- **Simplified Onboarding** :
+
+  - New developers can get up and running quickly by simply cloning the repository and starting the container.
+  - No need of complex setup instructions
+
+- **Consistency Across Environments** :
+
+  - All developers have consistent dev environment.
+  - Reduces the "it works on my machine" problem.
+
+- **Environment Isolation** :
+  - Isolates dependencies and tools.
+  - prevent conflicts with other projects.
+
+### Disadvantages
+
+- **Performance Overhead** :
+
+  - Can be resource-intensive.
+  - Managing and cleaning up unused containers and images.
+
+- **Complexity** :
+  - Requires basic knowledge of Docker and containerization concepts.
