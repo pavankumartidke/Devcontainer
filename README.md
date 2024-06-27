@@ -1,5 +1,13 @@
 # Dev Container Setup
 
+Dev Containers in Visual Studio Code provides a consistent development environment by using Docker containers where :
+
+- **Isolate Dependencies**
+- **Standardize Environments**
+- **Simplify Onboarding**
+
+are maintained.
+
 ## Prerequisites
 
 ### Download and Install VsCode
@@ -227,6 +235,11 @@
 * **They take time to set up** :
 
   - They do have some initial upfront time/effort cost.
+
+* **Pin your dependency versions** :
+
+  - The installation commands uses `apt-get` commands to install dependencies and docker will cache your built containers.
+  - if you rebuild your container, you could end up in a situation where you accidently install a newer version of your dependency.
 
 * **They can become stale** :
 
