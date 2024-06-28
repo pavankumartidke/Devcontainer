@@ -253,9 +253,9 @@ are maintained.
   - Because of the way VSCode is running within the container, there are a few workarounds for the issues.
   - Some functionality such as the voice chat, may or may not function 100%.
 
-## Bonus
+## Bonus : Docker management
 
-- If you are not CLI warrior and prefer UI, just like Docker Desktop, you can manage Docker containers and volumes within your WSL environment!.
+- If you are not **CLI warrior** and prefer UI, just like Docker Desktop, you can manage Docker containers and volumes within your WSL environment!.
 
 - Portainer is a great tool that provides a beautiful UI for managing Docker. Follow these steps to set it up:
 
