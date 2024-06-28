@@ -252,3 +252,18 @@ are maintained.
 * **VSCode LiveShare has issues** :
   - Because of the way VSCode is running within the container, there are a few workarounds for the issues.
   - Some functionality such as the voice chat, may or may not function 100%.
+
+## Bonus
+
+- If you are not CLI warrior and prefer UI, just like Docker Desktop, you can manage Docker containers and volumes within your WSL environment!.
+
+- Portainer is a great tool that provides a beautiful UI for managing Docker. Follow these steps to set it up:
+
+  1.  **Run Portainer using Docker Compose** :
+      ```
+      $ docker-compose -f docker-compose_portainer.yml up -d
+      ```
+  2.  **Access Portainer UI** :
+      `http://localhost:9000`
+
+  3.  Enjoy a seamless Docker management experience right from your browser!
